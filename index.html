@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GruClient</title>
+
+	<!-- Bootstrap CSS File -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- Custom CSS File -->
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+</head>
+<body>
+
+	<!-- Navbar Starts -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">GruClient</a>
+			</div>
+		</div>
+	</nav>
+	<!-- Navbar Ends -->
+
+	<div class="container">
+
+		<!-- Verification Div Starts -->
+		<div id="verification-div" class="margin-top-50px">
+			<h3 class="text-center">Enter the Verification Token</h3>
+
+			<!-- Input for verification-code -->
+			<div class="row">
+				
+				<div class="col-md-offset-2 col-md-8">
+					<p class="help-block">We just need your verification token before starting with the test. Enter the verification token you have recieved.</p>
+
+					<div class="row margin-top-100px">
+						<div class="col-md-offset-4 col-md-4">
+							<!-- input for verfication code -->
+							<input type="text" class="form-control" name="verfication-input" placeholder="Verification Token">
+							<br>
+							<button class="btn btn-success btn-block" id="verify-token">Verify</button>
+						</div>
+
+						<div class="col-md-4">
+							<!-- Intentionally Blank -->
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-2">
+					<!-- Intentionally Blank -->
+				</div>
+			</div>
+
+		</div>
+		<!-- Verification Div Ends -->
+
+		<!-- Instruction Div Starts -->
+		<div id="instructions-div">	
+			<h3>
+				<small><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></small> Instructions
+			</h3>
+
+			<div class="row">
+				<div class="col-sm-offset-1 col-sm-9">
+					<!-- General Instructions -->
+					<div class="panel panel-info">
+						<div class="panel-heading">General</div>
+						<div class="panel-body">
+							<ul>
+								<li> By taking this quiz, you agree not to discuss/post the questions shown here.</li>
+								<li> The duration of the quiz is 60 mins. Timing would be clearly shown.</li>
+								<li> Once you start the quiz, the timer would not stop, irrespective of any client side issues.</li>
+								<li> Questions can have single or multiple correct answers. They will be shown accordingly.</li>
+								<li> Your total score and the time left at any point in the quiz would be displayed on the top.</li>
+								<li> The scoring for each attempt of a question,would be visible to you in a separate section.</li>
+							<ul>
+						</div>
+					</div>
+				
+				</div>
+				<div class="col-sm-1">
+					<!-- Intentionally Blank -->
+				</div>
+			</div>
+
+		</div>
+		<!-- Instruction Div Ends -->
+
+	</div>
+
+	<!-- Required scripts included -->
+
+	<!-- Jquery Core Javascript -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- Bootstrap Core Javascript -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- Script Javascript -->
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
