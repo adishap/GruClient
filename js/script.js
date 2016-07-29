@@ -126,11 +126,11 @@ function update_score(questionIndex, answerValue){
 	var total_score_div = $("#total-score");
 
 	if(correctAnswers[questionIndex] == answerValue){
-		score += 2.5;
+		score += 3;
 		$("#last-question-score").html(3);
 	}
 	else{
-		score += -3;
+		score += -2.5;
 		$("#last-question-score").html(-2.5);
 	}
 
