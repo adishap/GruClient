@@ -7,10 +7,15 @@
 	margin-top: 50px;
 }
 
-#answer-div{
+/*Answer div CSS*/
+#answer-div {
 	height: 300px;
 }
 
-#answer-div  input[type="radio"]{
+#answer-div input[type="radio"] {
 	margin: 10px 20px;
+}
+
+#answer-div pre {
+	cursor: pointer;
 }

@@ -241,7 +241,10 @@ $("#submit-answer").on("click", function() {
 			displayQuestion(questionIndex + 1);
 		}
 		else{
-			alert("Thier are no more questions.");
+			alert("Test finished.");
+
+			//redirect to new page
+			window.location = 'report.html';
 		}
 
 	}
@@ -250,5 +253,10 @@ $("#submit-answer").on("click", function() {
 	}
 
 });
+
+//if option text is clicked then also radio button should get selected
+$('#answer-div').on('click', 'pre', function() {
+	$(this).parent().parent().find('input[type="radio"]').prop('checked',true);
+})
 
 init();
