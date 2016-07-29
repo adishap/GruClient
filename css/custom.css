@@ -6,3 +6,11 @@
 .margin-top-50px {
 	margin-top: 50px;
 }
+
+#answer-div{
+	height: 300px;
+}
+
+#answer-div  input[type="radio"]{
+	margin: 10px 20px;
+}
