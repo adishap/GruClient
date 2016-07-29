@@ -35,10 +35,12 @@
 
 					<div class="row margin-top-100px">
 						<div class="col-md-offset-4 col-md-4">
-							<!-- input for verfication code -->
-							<input type="text" class="form-control" name="verfication-input" placeholder="Verification Token" required>
-							<br>
-							<button class="btn btn-success btn-block" id="verify-token">Verify</button>
+							<form method="POST" name="verfication-form">
+								<!-- input for verfication code -->
+								<input type="text" class="form-control" name="verfication-input" placeholder="Verification Token" required>
+								<br>
+								<input type="submit" class="btn btn-success btn-block" id="verify-token" value="Verify">
+							</form>
 						</div>
 
 						<div class="col-md-4">

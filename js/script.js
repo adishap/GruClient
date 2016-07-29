@@ -122,16 +122,16 @@ function show_timer(){
 
 /*function to update the score*/
 function update_score(questionIndex, answerValue){
-	var last_score_div = $("#last-question-score");
-	var total_score_div = $("#total-score");
+	var last_score_div = $("#last-question-score"),
+		total_score_div = $("#total-score");
 
 	if(correctAnswers[questionIndex] == answerValue){
-		score += 3;
-		$("#last-question-score").html(3);
+		score += 2.5;
+		$("#last-question-score").html(2.5);
 	}
 	else{
-		score += -2.5;
-		$("#last-question-score").html(-2.5);
+		score += -3;
+		$("#last-question-score").html(-3);
 	}
 
 	total_score_div.html(score);
