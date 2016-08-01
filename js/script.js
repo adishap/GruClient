@@ -1,4 +1,10 @@
-var //Collection of all questions
+var //api base url
+	apiBaseUrl = 'http://127.0.0.1:8000',
+	//auth_token
+	authToken = '',
+	//sid
+	sid = '',
+	//Collection of all questions
 	quizQuestions = [{" What does HTML stand for?":
 							['Hyper Text Markup Language',
 							'Home Tool Markup Language',
@@ -59,6 +65,47 @@ var //Collection of all questions
 	correctAnswers = [0, 0, 2, 1, 0, 0, 1, 2, 1, 1],
 	/*Score of test, initially 0*/
 	score = 0;
+
+/* function to make ajax request
+arguments url, method, data and a callback function*/
+function ajaxRequest(url, method, authToken, data, callback) {
+	console.log(url, method, authToken);
+	$.ajax({
+		url: url,
+    	headers: { 'Access-Control-Allow-Origin' : '*',
+    	"Authorization": authToken },
+    	type: method,
+		crossDomain: true,
+    	data: data,
+		success: function(response) {
+			console.log(response);
+			callback(JSON.parse(response));
+		}
+    });
+}
+
+
+/*function to genrate auth-token and requesting the sid for it
+auth-token is genrated randomly with the prefix 'test-' as
+we need auth token for demo.*/
+function genrateAuthToken(){
+	var randomNo,
+		//variables for ajax request
+		url = apiBaseUrl + "/authenticate",
+		data = {},
+		headers = {},
+		method = "GET";
+
+	//random number generated between 1 to 10000 for auth-token
+	randomNo = Math.floor((Math.random() * 10000) + 1);
+	authToken = 'test-'+ randomNo;
+	console.log(authToken);
+
+	//calling ajax request function
+	ajaxRequest(url, method, authToken, data,function (data) {
+		console.log(response);
+	});
+}
 
 
 /*Function to display a question and options
@@ -190,10 +237,12 @@ if($('#final-score').is(":visible")){
 
 
 /* If verify button is clicked */
-$("#verify-token").on("click", function() {
+$("#start-demo").on("click", function() {
+	//generating the auth token
+	genrateAuthToken();
 
 	//remove the verification div
-	$("#verification-div").remove();
+	$("#demo-div").remove();
 
 	//show the instructions div
 	$("#instructions-div").show();

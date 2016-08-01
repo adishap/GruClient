@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8"/>
 	<title>GruClient</title>
 
 	<!-- Bootstrap CSS File -->
@@ -23,24 +24,19 @@
 
 	<div class="container">
 
-		<!-- Verification Div Starts -->
-		<div id="verification-div" class="margin-top-50px">
-			<h3 class="text-center">Enter the Verification Token</h3>
+		<!-- Start Demo div Starts -->
+		<div id="demo-div" class="margin-top-50px">
+			<h3 class="text-center">GruClient</h3>
 
-			<!-- Input for verification-code -->
 			<div class="row">
 				
 				<div class="col-md-offset-2 col-md-8">
-					<p class="help-block">We just need your verification token before starting with the test. Enter the verification token you have recieved.</p>
+					<p class="help-block text-center">Hey there..!!! Click the button to begin with GruClient demo.</p>
 
 					<div class="row margin-top-100px">
 						<div class="col-md-offset-4 col-md-4">
-							<form method="POST" name="verfication-form">
-								<!-- input for verfication code -->
-								<input type="text" class="form-control" name="verfication-input" placeholder="Verification Token" required>
-								<br>
-								<input type="submit" class="btn btn-success btn-block" id="verify-token" value="Verify">
-							</form>
+						<!-- Start Demo button -->
+							<button id="start-demo" class="btn btn-primary btn-lg btn-block"> Start Demo <span class="pull-right glyphicon glyphicon-play" aria-hidden="true"></span></button>
 						</div>
 
 						<div class="col-md-4">
@@ -55,7 +51,7 @@
 			</div>
 
 		</div>
-		<!-- Verification Div Ends -->
+		<!-- Start Demo div Ends -->
 
 		<!-- Instruction Div Starts -->
 		<div id="instructions-div">	
