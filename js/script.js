@@ -83,7 +83,8 @@ function displayQuestion() {
 		answerHtml= "",
 		questionDiv= $('#question-div'),
 		answerDiv= $('#answer-div'),
-		answerOption;
+		answerOption,
+		lastScore;
 
 	//calling ajax request function
 	ajaxRequest(url, method, authToken, data,function (data) {
@@ -93,6 +94,8 @@ function displayQuestion() {
 		//if there are questions
 		if(index !== "DEMOEND" ){
 			score = data.score;
+			lastScore = score - $("#total-score").html();
+
 			//removing the html from divs
 			questionDiv.html('');
 			answerDiv.html('');
@@ -129,7 +132,7 @@ function displayQuestion() {
 			update_scoring_instructions(data.positive, data.negative);
 
 			//update score for question
-			update_score(score);
+			update_score(score, lastScore);
 		}
 		else{
 			window.location = 'report.html';
@@ -161,13 +164,12 @@ function show_timer(){
 
 
 /*function to update the score*/
-function update_score(score){
+function update_score(totalScore, lastScore){
 	var last_score_div = $("#last-question-score"),
-		total_score_div = $("#total-score"),
-		previous_score = total_score_div.html();
+		total_score_div = $("#total-score");
 
-	last_score_div.html(score - previous_score);
-	total_score_div.html(score);
+	last_score_div.html(lastScore);
+	total_score_div.html(totalScore);
 }
 
 
