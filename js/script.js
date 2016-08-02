@@ -208,7 +208,7 @@ function init(){
 
 
 /* If start-demo button is clicked */
-$("#start-demo").on("click", function() {
+$("#verify-token").on("click", function() {
 	genrateAuthToken().then(function (response) {
 		sid = response.id;
 		demoduration = response.demoduration;
