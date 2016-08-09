@@ -11,106 +11,85 @@
 </head>
 <body>
 
+	<!-- Start Verifcation div Starts -->
+	<div id="demo-div" class="text-center">
+		<div>
+			<h1>GruClient</h1>
+			<p>Help identify the right minions</p>
+			<button class="grubutton" id="verify-token">Start Demo</button>
+		</div>
+		<img src="images/welcome-background.jpg">
+	</div>
+	<!-- Start Verification div Ends -->
+
 	<!-- Navbar Starts -->
 	<nav class="navbar navbar-default">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">GruClient</a>
+				<p class="navbar-brand" href="#">GruClient</p>
 			</div>
 
 			<!-- Time Left div -->
-			<ul class="nav navbar-nav navbar-right" id="timer-div">
-				<li class="active">
-					<a href="#"><strong><span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> Time Left <span id="time-left">20:00</span></strong></a>
+			<ul class="nav navbar-nav navbar-right" >
+				<li class="instruction-li blue-bordered-li"><a href="">Instructions</a></li>
+				<li id="timer-div"  class="blue-bordered-li">
+					<a href="#">Time Left <span id="time-left">20:00</span></a>
 				</li>
 			</ul>
 		</div>
 	</nav>
 	<!-- Navbar Ends -->
 
-	<div class="container">
+	<div class="instruction-banner text-center">
+		<h1>Instructions</h1>
+		<img src="images/instruction-banner.jpg">
+	</div>
 
-		<!-- Start Verifcation div Starts -->
-		<div id="demo-div" class="margin-top-50px">
-			<h3 class="text-center">GruClient</h3>
-
-			<div class="row">
-				
-				<div class="col-md-offset-2 col-md-8">
-					<p class="help-block text-center">Hey there..!!! Click the button to begin with GruClient demo.</p>
-
-					<div class="row margin-top-100px">
-						<div class="col-md-offset-4 col-md-4">
-						<!-- Start Verification button -->
-							<button id="verify-token" class="btn btn-success btn-lg btn-block"> Verify Token </button>
-						</div>
-
-						<div class="col-md-4">
-							<!-- Intentionally Blank -->
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-2">
-					<!-- Intentionally Blank -->
-				</div>
-			</div>
-
-		</div>
-		<!-- Start Verification div Ends -->
-
+	<div class="container">	
 		<!-- Instruction Div Starts -->
-		<div id="instructions-div">	
-			<h3>
-				<small><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></small> Instructions
-			</h3>
+		<div id="instructions-div">
 
 			<div class="row">
 				<div class="col-sm-offset-1 col-sm-10">
 
 					<!-- General Instructions -->
-					<div class="panel panel-info">
-						<div class="panel-heading">General</div>
-						<div class="panel-body">
-							<ul>
-								<li> By taking this quiz, you agree not to discuss/post the questions shown here.</li>
-								<li> The duration of the quiz is 60 mins. Timing would be clearly shown.</li>
-								<li> Once you start the quiz, the timer would not stop, irrespective of any client side issues.</li>
-								<li> Questions can have single or multiple correct answers. They will be shown accordingly.</li>
-								<li> Your total score and the time left at any point in the quiz would be displayed on the top.</li>
-								<li> The scoring for each attempt of a question,would be visible to you in a separate section.</li>
-							<ul>
-						</div>
-					</div>
+
+					<h3>General</h3>
+					<hr>
+					<ul>
+						<li> By taking this quiz, you agree not to discuss/post the questions shown here.</li>
+						<li> The duration of the quiz is 60 mins. Timing would be clearly shown.</li>
+						<li> Once you start the quiz, the timer would not stop, irrespective of any client side issues.</li>
+						<li> Questions can have single or multiple correct answers. They will be shown accordingly.</li>
+						<li> Your total score and the time left at any point in the quiz would be displayed on the top.</li>
+						<li> The scoring for each attempt of a question,would be visible to you in a separate section.</li>
+					</ul>
 
 					<!-- Scoring Instructions -->
-					<div class="panel panel-info">
-						<div class="panel-heading">Scoring</div>
-						<div class="panel-body">
-							<ul>
-								<li>There is NEGATIVE scoring for wrong answers. So, please DO NOT GUESS.</li>
-								<li> If you skip a question, the score awarded is always ZERO.</li>
-								<li>Scoring would be clearly marked in the question on the right hand side box.</li>
-							<ul>
-						</div>
-					</div>
+					<h3>Scoring</h3>
+ 					<hr>
+ 					<ul>
+						<li>There is NEGATIVE scoring for wrong answers. So, please DO NOT GUESS.</li>
+						<li> If you skip a question, the score awarded is always ZERO.</li>
+						<li>Scoring would be clearly marked in the question on the right hand side box.</li>
+					</ul>
 
 					<!-- Contact Instructions -->
-					<div class="panel panel-info">
-						<div class="panel-heading">Contact</div>
-						<div class="panel-body">
-							<ul>
-								<li> If there are any problems with the setup, or something is unclear, please DO NOT start the quiz.</li>
-								<li>Send email to contact@dgraph.io and tell us the problem. So we can solve it before you take the quiz.</li>
-							<ul>
-						</div>
-					</div>
+					<h3>Contact</h3>
+ 					<hr>
+ 					<ul>
+						<li> If there are any problems with the setup, or something is unclear, please DO NOT start the quiz.</li>
+						<li>Send email to contact@dgraph.io and tell us the problem. So we can solve it before you take the quiz.</li>
+					</ul>
 
+					<div class="text-center margin-top-50px">
+						<button class="grubutton" id="start-test">Start Test</button>
+						<small class="help-block">Read the instructions carefully before starting the test.</small>
+					</div>
 					<!-- Start test button -->
 					<div class="row">
 						<div class="col-md-offset-4 col-md-4">
-							<button class="btn btn-primary btn-block" id="start-test"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Start Test</button>
-							<small class="help-block">Read the instructions carefully before starting the test.</small>
+							
 						</div>
 						<div class="col-md-4">
 							<!-- Intentionally Blank -->
@@ -128,49 +107,67 @@
 		<!-- Instruction Div Ends -->
 
 		<!-- quiz-div ends -->
-		<div class="row" id="quiz-div">
-			<!-- Questions div -->
-			<div class="col-md-8" id="quiz-questions">
-				<div id="question-div"></div>
-				<div id="answer-div"></div>
+		<div id="quiz-div">
+			<div class="row">
+				<!-- Questions div -->
+				<div class="col-md-8" id="quiz-questions">
+					<div id="question-div"></div>
+					<div id="answer-div"></div>
 
-				<!-- Buttons Div -->
-				<div class="row">
-					<div class="col-sm-offset-8 col-sm-2">
-						<button class="btn btn-warning btn-block" id="skip-question"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span> Skip</button>
+					<!-- Buttons Div -->
+					<div>
+						<button class="grubutton" id="skip-question"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span> Skip</button>
+						<button class="grubutton" id="submit-answer"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Submit</button>
 					</div>
-					<div class="col-sm-2">
-						<button class="btn btn-primary btn-block" id="submit-answer"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Submit</button>
-					</div>
-				</div>
-			</div>
 
-			<!-- Instructions and score div -->
-			<div class="col-md-3 col-md-offset-1">
-
-				<!-- Total score Panel -->
-				<div class="panel panel-default">
-					<div class="panel-heading">Total Score</div>
-					<div class="panel-body" id="total-score">
-					</div>
 				</div>
 
-				<!-- Last Score Panel -->
-				<div class="panel panel-default">
-					<div class="panel-heading">Last Question Score</div>
-					<div class="panel-body" id="last-question-score">
+				<!-- Instructions and score div -->
+				<div class="col-md-3">
+					<!-- User Auth token -->
+					<div class="blue-background">
+						<strong>Verification Token</strong>
 					</div>
+					<div class="blue-border" id="auth-token"></div>
+					<br>
+					<br>
+					<!-- Total score Panel -->
+
+					<div class="blue-background">
+						<strong>Score</strong>
+					</div>
+					<div class="blue-border">
+						Total Score  : <span id="total-score"></span>
+						<br>
+						Last Question Score : <span id="last-question-score"></span>
+					</div>
+					<br>
+					<br>
+
+					<!-- Scoring Instructions -->
+					<div class="blue-background">
+						<strong>Scoring Instructions</strong>
+					</div>
+					<div id="scoring-instructions" class="blue-border">
+					</div>
+
 				</div>
 
-				<!-- Instructions -->
-				<div class="panel panel-default">
-					<div class="panel-heading">Scoring</div>
-					<div class="panel-body" id="scoring-instructions">
-					</div>
-				</div>
+				<div class="col-md-1"></div>
 			</div>
 		</div>
 		<!-- quiz-div ends -->
+
+		<!-- result-div starts -->
+		<div class="text-center" id="result-div">
+
+			<h4>Test Finished..!!!</h4>
+			<p id="result"></p><br>
+			<a href="/"><button  class="home-button">Back to Home</button></a>
+
+		</div>
+		<!-- result-div starts -->
+
 	</div>
 
 	<!-- Required scripts included -->

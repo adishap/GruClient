@@ -116,12 +116,12 @@ function displayQuestion() {
 				//bootstrap grid system
 				answerHtml += '<div class="row">';
 				if(data.isMultiple){
-					answerHtml += '<div class="col-sm-1"><input type="checkbox" name="option" value="'+answerOption.id+'"></div>'				
+					answerHtml += '<div class="col-sm-12"><input type="checkbox" name="option" value="'+answerOption.id+'">'
 				}
 				else{
-					answerHtml += '<div class="col-sm-1"><input type="radio" name="option" value="'+answerOption.id+'"></div>'
+					answerHtml += '<div class="col-sm-12"><input type="radio" name="option" value="'+answerOption.id+'">'
 				}
-				answerHtml += '<div class="col-sm-11"><pre><xmp style="padding:0px;margin:0px;white-space:nowrap">' + answerOption.str + '</xmp></pre><br></div>';
+				answerHtml += '<label>' + answerOption.str + '</label><br></div>';
 				answerHtml += '</div>';
 			}
 
@@ -135,7 +135,13 @@ function displayQuestion() {
 			update_score(score, lastScore);
 		}
 		else{
-			window.location = 'report.html';
+			//if the quiz ends hide quiz and timer div
+			$('#quiz-div').hide();
+			$("#timer-div").hide();
+
+			//update the result div 
+			$('#result').html("Hi! Your verification token for the test was <strong>" + authToken + "</strong>.Your score is <strong>" + score +"</strong>. You will be contacted soon.");
+			$('#result-div').show();
 		}
 	});
 }
@@ -176,35 +182,13 @@ function update_score(totalScore, lastScore){
 /* Function to initialize the gruclient*/
 function init(){
 	//initially instruction div and quiz div will be hidden
+	$("nav").hide();
+	$(".instruction-banner").hide();
 	$("#instructions-div").hide();
 	$("#quiz-div").hide();
 	$("#timer-div").hide();
+	$('#result-div').hide();
 }
-
-
-//restrict back button of browser 
-(function ($, global) {
-
-    var _hash = "!",
-    noBackPlease = function () {
-        global.location.href += "#";
-
-        setTimeout(function () {
-            global.location.href += "!";
-        }, 50);
-    };
-
-    global.setInterval(function () {
-        if (global.location.hash != _hash) {
-            global.location.hash = _hash;
-        }
-    }, 100);
-
-    global.onload = function () {
-        noBackPlease();
-    }
-
-})(jQuery, window);
 
 
 /* If start-demo button is clicked */
@@ -226,6 +210,8 @@ $("#verify-token").on("click", function() {
 
 		//show the instructions div
 		$("#instructions-div").show();
+		$("nav").show();
+		$(".instruction-banner").show();
 		});
 });
 
@@ -233,6 +219,8 @@ $("#verify-token").on("click", function() {
 /*if start test is clicked*/
 $("#start-test").on("click", function() {
 	$("#instructions-div").hide();
+	$(".instruction-banner").hide();
+	$(".instruction-li").hide();
 	$("#quiz-div").show();
 	$("#timer-div").show();
 
@@ -243,6 +231,8 @@ $("#start-test").on("click", function() {
 	//call the displayQuestion function and passing the index of first QuizQuestions array
 	displayQuestion();
 
+	//show user auth token
+	$('#auth-token').html(authToken);
 	//start timer
 	show_timer();
 });
@@ -305,7 +295,7 @@ $("#submit-answer").on("click", function() {
 });
 
 //if option text is clicked then also radio button should get selected
-$('#answer-div').on('click', 'pre', function() {
+$('#answer-div').on('click', 'label', function() {
 	$(this).parent().parent().find('input[name="option"]').prop('checked',true);
 })
 

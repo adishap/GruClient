@@ -7,15 +7,183 @@
 	margin-top: 50px;
 }
 
+@font-face {
+	font-family: montserrat;
+	src: url('../fonts/Montserrat-Regular.ttf') 
+}
+
+.grubutton{
+	width: 120px;
+	color: #fff;
+	padding: 5px;
+	font-family: montserrat;
+}
+
+/*Question div CSS*/
+#question-div{
+	margin-top: -20px;
+}
+
 /*Answer div CSS*/
-#answer-div {
-	height: 300px;
+#answer-div{
+	height: 150px;
+	padding: 5px;
 }
 
-#answer-div input[type="radio"] {
-	margin: 10px 20px;
-}
-
-#answer-div pre {
+#answer-div label{
+	padding: 5px;
 	cursor: pointer;
+}
+
+#skip-question {
+	border: 0px;
+	background-color: #FCE94D;
+}
+
+#submit-answer{
+	border: 0px;
+	background-color: #69D7CF;
+}
+
+#quiz-questions button{
+	margin: 0 0 0 20px;
+}
+
+/* demo div CSS */
+#demo-div {
+	position: fixed;
+	background: #9fd7fb;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	font-family: montserrat;
+}
+
+#demo-div div{
+	margin-top: 200px;
+	z-index: 2;
+	position: relative;
+	color: #fff;
+}
+
+#demo-div button{
+	background: rgba(159, 215, 251, 0.5);
+	border: 2px solid #fff;
+}
+
+#demo-div img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.1;
+}
+
+#demo-div p{
+	color: #35332F;
+}
+
+/*Navbar CSS*/
+.navbar-default{
+	background-color: #FFFFFF;
+	border: 0px;
+	min-height: 70px;
+}
+
+.navbar-default .navbar-brand{
+	color: #9fd7fb;
+	letter-spacing: 1px;
+	font-size: 25px;
+	font-family: montserrat;
+}
+
+.blue-bordered-li{
+	letter-spacing: 1px;
+	font-size: 15px;
+	font-family: montserrat;
+	border-bottom: 2px #9fd7fb solid;
+}
+
+.navbar-default .navbar-brand:hover{
+	color: #9fd7fb;
+}
+
+nav .container{
+	margin-top: 10px;
+}
+
+/* instruction banner */
+.instruction-banner {
+	position: relative;
+	background: #9fd7fb;
+	overflow: hidden;
+	margin-top: -15px;
+}
+
+.instruction-banner h1 {
+	padding: 50px;
+	z-index: 2;
+	position: relative;
+	color: #FFFFFF;
+	font-family: montserrat;
+}
+
+.instruction-banner img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	z-index: 1;
+	opacity: 0.1;
+	min-width: 1200px; /* corresponds to max height of 450px */
+	margin: 0 auto;
+}
+
+#instructions-div hr{
+	border: none;
+	height: 2px;
+	/* Set the hr color */
+	color: #726F64; /* old IE */
+	background-color: #726F64;
+	width: 15%;
+	margin: -5px 0 10px 0;
+}
+
+h3{
+	font-family: montserrat;
+	color: #35332F;
+}
+
+/*start test button*/
+#start-test{
+	background-color: #35332F;
+	border: 0;
+}
+
+/*score and instruction panel*/
+.blue-background{
+	background: #9fd7fb;
+	color: #fff;
+	padding: 5px;
+	font-family: montserrat;
+	height: 30px;
+}
+
+.blue-border{
+	border: 1px solid #9fd7fb;
+	font-family: montserrat;
+	padding: 5px;
+}
+
+/*Results home button*/
+.home-button{
+	border: 1px solid #9fd7fb;
+	background-color: #fff;
+	color: #9fd7fb;
+	font-family: montserrat;
+	padding: 5px;
 }
